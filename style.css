@@ -1,0 +1,163 @@
+
+@font-face {
+  font-family: "Padauk";
+  src: local("Padauk"), url("Padauk.ttf");
+}
+@font-face {
+  font-family: "Padauk";
+  font-weight: bold;
+  src: local("Padauk"), url("Padauk-Bold.ttf");
+}
+
+
+body {
+	background-image: url('background_hero.jpg');
+}
+/* setting margin on the real body causes problems for keyboardMover in ie*/
+div.body {
+  margin: auto;
+  width: 50%;
+  color: #3f72aa;
+  counter-reset: note;
+  font-size: 12pt;
+}
+
+
+
+h1, h1 span, h1 span.my {
+  font-size: 16pt;
+  padding-top: 0px;
+}
+h2 {
+  font-size: 40pt;
+  text-align: center;
+  padding-bottom: 10px;
+}
+h2.my {
+  font-size: 14pt;
+  font-weight: bold;
+}
+h3 {
+  font-size: 13pt;
+}
+h4 {
+  font-size: 12pt;
+}
+h5 {
+  font-size: 12pt;
+}
+
+h1,h2,h3,h4,h5 {
+  color:  #646464;
+  font-family: 'Covered By Your Grace', cursive;
+}
+
+.convert {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  background-color: #f3faff;
+  height: 600px;
+  border-radius: 10px;
+  margin-top: 50px;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.03)
+}
+
+.arrow {
+  font-size: 35px;
+  color: #0563af;
+  padding: 16px;
+}
+
+
+
+.dropdown {
+  background-color: #0563af;
+  color: white;
+  padding: 12px;
+  width: 170px;
+  border: none;
+  font-size: 16px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+
+
+
+
+.button {
+  display: inline-block;
+  border-radius: 6px;
+  background-color: #f3faff;
+  border-color: #0563af;
+  border: 2px solid #0563af;
+  color: #0563af;
+  text-align: center;
+  font-size: 22px;
+  font-family: Tahoma, sans-serif;
+  padding: 8px;
+  width: 150px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.button:hover {
+  display: inline-block;
+  border-radius: 6px;
+  background-color: #0563af;
+  border-color: #0563af;
+  border: 2px solid #0563af;
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+  font-family: Tahoma, sans-serif;
+  padding: 8px;
+  width: 150px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  transition: 500ms;
+}
+
+textarea {
+  width: 400px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: #fcfcfc;
+  padding: 20px;
+  border-color: #3f72aa;
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  border: none;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #646464;
+  text-align: center;
+}
+
+.copy_right {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer p a {
+  color: #0563af;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Myanmar fonts converter</title>
+        <meta content="text/html; charset=UTF-8;" http-equiv="Content-Type"/>
+        <link type="text/css" rel="stylesheet" href="./documents/controllers/myKeyboard.css"/>
+        <link type="text/css" rel="stylesheet" href="./style.css"/>
+        <script  type="text/javascript" src="./documents/thanlwin.js">//padding to keep end tag</script>
+        <script type="text/javascript" src="./documents/controllers/common/Common.js"></script>
+        <meta content="Myanmar font converter" lang="en" name="keywords"/><script type='text/javascript' src='./documents/controllers/common/Debug.js'></script>
+        <script type='text/javascript' src='./documents/controllers/converters/MyanmarConverter.js'></script>
+        <script type='text/javascript' src='./documents/controllers/converters/MyanmarConverterData.js'></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class='body'>
+            <h2>Myanmar Fonts Converter</h2>
+            
+            <div class ="convert">
+                <form action="">
+                        <select class="dropdown" id="initialEncoding" name="initialEncoding" onchange="setFont(this.value, 'textToConvert');">
+                            <option value="Zawgyi-One">ZawGyi-One</option>
+                            <option value="WinInnwa">WinInnwa</option>
+                            <option value="Wwin_Burmese1">Wwin_Burmese1</option>
+                            <option value="Unicode">Unicode</option>
+                        </select>
+
+                    <label class="arrow" for="initialEncoding"><span>&#187;</span><span>&#187;</span></label>
+                        <select class="dropdown" id="targetEncoding" name="targetEncodiing" onchange="setFont(this.value, 'convertedText');">
+                            <option value="WinInnwa">WinInnwa</option>
+                            <option value="Unicode">Unicode</option>
+                            <option value="Zawgyi-One">ZawGyi-One</option>
+                            <option value="Wwin_Burmese1">Wwin_Burmese1</option>
+                        </select>
+
+                        <textarea id="textToConvert" title="Text to Convert" placeholder="Paste your text here to convert."></textarea>
+                        <span onclick="convertTextAreas();" class="button">Convert</span>
+                    <textarea id="convertedText" title="Converted text" readonly="readonly"></textarea>
+                </form>
+            </div>
+
+            <script>
+
+                function setFont(font, theId)
+                {
+                    var elem = document.getElementById(theId);
+                    if (elem)
+                    {
+                        if (font == "Unicode")
+                            elem.style.fontFamily = "Padauk,ThanLwin,Myanmar3";
+                        else
+                            elem.style.fontFamily = font;
+                    }
+                }
+                function convertTextAreas()
+                {
+                    tlsConvert('textToConvert', document.getElementById('initialEncoding').value, 'convertedText', document.getElementById('targetEncoding').value);
+                }
+
+            </script>
+        </div>
+
+        <div class="footer">
+            <p class="copy_right">
+                &copy;<script>document.write(new Date().getFullYear());</script> <a href="https://www.facebook.com/tmlahmed/" target="_blank"><strong>Tamal Ahmed</strong></a> | All rights reserved</p>
+          </div>
+
+    </body>
+</html>
