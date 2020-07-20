@@ -68,6 +68,6 @@ function removeEclipseLinks()
     }
 }
 
-myUnsupported = '<p class=\"myWarning\">Your Web Browser does not support Myanmar Unicode, please see <a href=\"/ThanLwinSoft/MyanmarUnicode/WebDevelopers/#detect\">here</a> to get a browser with Myanmar Unicode Support.</p>';
+myUnsupported = '<p class=\"myWarning\">Your Web Browser does not support Myanmar Unicode, please see <a href=\"/TamalAhmed/MyanmarUnicode/WebDevelopers/#detect\">here</a> to get a browser with Myanmar Unicode Support.</p>';
 
 

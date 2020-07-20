@@ -1,31 +1,5 @@
 /*
-Copyright 2005,2006 ThanLwinSoft.org
-
-You are free to use this on your website and modify it 
-subject to a Creative Commons license. 
-However, please add a link to www.thanlwinsoft.org 
-on every page that uses this script. For more info
-and contact details see www.thanlwinsoft.org.
-
-This copyright statement must not be removed.
-
-Version:       0.1
-Author:        Keith Stribley (KRS)
-Contributors:  
-
-Change History:
-08-07-2005    KRS    Initial Version
-24-07-2006    KRS    Modified for new Unicode Proposal
-23-07-2006    KRS    Keyboard can now be dragged around browser window
-
-
-*/
-// you may need to override the myK.inputId value to match the id on your 
-// input box. You can do this inside script tags after you have
-// included this script.
-// If you are using more than one input box, then set the onclick event
-// of each input box to call myK.switchInput('inputId') where inputId must
-// be different for each input box.
+Copyright 2020 Tamal Ahmed
 
 /**
 * The algorithm used here uses the syllable structure from Unicode 4

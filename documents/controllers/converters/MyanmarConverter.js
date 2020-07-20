@@ -1,4 +1,4 @@
-// Copyright: Keith Stribley 2010 http://www.ThanLwinSoft.org/
+// Copyright: Tamal Ahmed 2020 https://github.com/tmlahmed/
 // License: GNU Lesser General Public License, version 2.1 or later.
 // http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
 
