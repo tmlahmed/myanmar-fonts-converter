@@ -36,15 +36,31 @@
                             <option value="Wwin_Burmese1">Wwin_Burmese1</option>
                         </select>
 
-                        <textarea class="text-box" id="textToConvert" placeholder="Paste your text here to convert."></textarea>
-                        <span onclick="convertTextAreas();" class="button">Convert</span>
-                        
-                    <textarea class="text-box" id="convertedText" readonly="readonly"></textarea>
-                        <div class="tooltip">
-                            <span class="clipboard" onclick="copyToClipboard()" onmouseout="outFunc()">
-                                <span class="tooltiptext" id="myTooltip">Copy Text</span><i class="fa fa-copy">
-                                </i></span>
+                        <!-- Convert To Text Area-->
+                        <div>
+                            <textarea class="text-box" id="textToConvert" placeholder="Paste your text here to convert."></textarea>
+                            <div class="tooltip">
+                                <span class="clipboard" onclick="clearFieldConvert()" onmouseout="outFunc()">
+                                    <span class="tooltiptext" id="myTooltip">Clear Field</span><i class="fa fa-undo">
+                                    </i></span>
+                            </div>
                         </div>
+
+                        <!-- ConvertButton-->
+                        <span onclick="convertTextAreas();" class="button">Convert</span>
+                     
+                        <!-- Converted Text Area-->
+                        <textarea class="text-box" id="convertedText" readonly="readonly"></textarea>
+                            <div class="tooltip">
+                                <span class="clipboard" onclick="copyToClipboard()" onmouseout="outFunc()">
+                                    <span class="tooltiptext" id="myTooltip">Copy Text</span><i class="fa fa-copy">
+                                    </i></span>
+                            </div>
+                            <div class="tooltip">
+                                <span class="clipboard" onclick="clearFieldConverted()" onmouseout="outFunc()">
+                                    <span class="tooltiptext" id="myTooltip">Clear Field</span><i class="fa fa-undo">
+                                    </i></span>
+                            </div>
                 </form>
             </div>
 
@@ -78,13 +94,21 @@
                     document.execCommand("copy");
 
                     var tooltip = document.getElementById("myTooltip");
-                    tooltip.innerHTML = "Copied to clipboard";
+                    //tooltip.innerHTML = "Copied to clipboard";
                     }
 
                     function outFunc() {
                         var tooltip = document.getElementById("myTooltip");
-                        tooltip.innerHTML = "Copy Text";
-}
+                        //tooltip.innerHTML = "Copy Text";
+                    }
+
+                    function clearFieldConvert() {
+                        document.getElementById("textToConvert").value = "";
+                    }
+
+                    function clearFieldConverted() {
+                        document.getElementById("convertedText").value = "";
+                    }
 
             </script>
         </div>
