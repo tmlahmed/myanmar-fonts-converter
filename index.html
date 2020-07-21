@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
     <head>
-        <title>Myanmar fonts converter</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />  <title>Myanmar fonts converter</title>
         <meta content="text/html; charset=UTF-8;" http-equiv="Content-Type"/>
         <link type="text/css" rel="stylesheet" href="./documents/controllers/myKeyboard.css"/>
         <link type="text/css" rel="stylesheet" href="./style.css"/>
@@ -12,6 +12,7 @@
         <script type='text/javascript' src='./documents/controllers/converters/MyanmarConverterData.js'></script>
 
         <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
@@ -21,10 +22,10 @@
             <div class ="convert">
                 <form action="">
                         <select class="dropdown" id="initialEncoding" name="initialEncoding" onchange="setFont(this.value, 'textToConvert');">
+                            <option value="Unicode">Unicode</option>
                             <option value="Zawgyi-One">ZawGyi-One</option>
                             <option value="WinInnwa">WinInnwa</option>
                             <option value="Wwin_Burmese1">Wwin_Burmese1</option>
-                            <option value="Unicode">Unicode</option>
                         </select>
 
                     <label class="arrow" for="initialEncoding"><span>&#187;</span><span>&#187;</span></label>
@@ -35,9 +36,15 @@
                             <option value="Wwin_Burmese1">Wwin_Burmese1</option>
                         </select>
 
-                        <textarea class="text-box" id="textToConvert" title="Text to Convert" placeholder="Paste your text here to convert."></textarea>
+                        <textarea class="text-box" id="textToConvert" placeholder="Paste your text here to convert."></textarea>
                         <span onclick="convertTextAreas();" class="button">Convert</span>
-                    <textarea class="text-box" id="convertedText" title="Converted text" readonly="readonly"></textarea>
+                        
+                    <textarea class="text-box" id="convertedText" readonly="readonly"></textarea>
+                        <div class="tooltip">
+                            <span class="clipboard" onclick="copyToClipboard()" onmouseout="outFunc()">
+                                <span class="tooltiptext" id="myTooltip">Copy Text</span><i class="fa fa-copy">
+                                </i></span>
+                        </div>
                 </form>
             </div>
 
@@ -58,6 +65,26 @@
                 {
                     tlsConvert('textToConvert', document.getElementById('initialEncoding').value, 'convertedText', document.getElementById('targetEncoding').value);
                 }
+
+                function copyToClipboard() {
+                    /* Get the text field */
+                    var copyText = document.getElementById("convertedText");
+
+                    /* Select the text field */
+                    copyText.select();
+                    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+                    /* Copy the text inside the text field */
+                    document.execCommand("copy");
+
+                    var tooltip = document.getElementById("myTooltip");
+                    tooltip.innerHTML = "Copied to clipboard";
+                    }
+
+                    function outFunc() {
+                        var tooltip = document.getElementById("myTooltip");
+                        tooltip.innerHTML = "Copy Text";
+}
 
             </script>
         </div>
