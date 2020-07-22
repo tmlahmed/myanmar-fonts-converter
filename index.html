@@ -39,11 +39,9 @@
                         <!-- Convert To Text Area-->
                         <div>
                             <textarea class="text-box" id="textToConvert" placeholder="Paste your text here to convert."></textarea>
-                            <div class="tooltip">
-                                <span class="clipboard" onclick="clearFieldConvert()" onmouseout="outFunc()">
+                                <span class="clipboard tooltip" onclick="clearFieldConvert()" onmouseout="outFunc()">
                                     <span class="tooltiptext" id="myTooltip">Clear Field</span><i class="fa fa-undo">
                                     </i></span>
-                            </div>
                         </div>
 
                         <!-- ConvertButton-->
@@ -51,16 +49,12 @@
                      
                         <!-- Converted Text Area-->
                         <textarea class="text-box" id="convertedText" readonly="readonly"></textarea>
-                            <div class="tooltip">
-                                <span class="clipboard" onclick="copyToClipboard()" onmouseout="outFunc()">
-                                    <span class="tooltiptext" id="myTooltip">Copy Text</span><i class="fa fa-copy">
-                                    </i></span>
-                            </div>
-                            <div class="tooltip">
-                                <span class="clipboard" onclick="clearFieldConverted()" onmouseout="outFunc()">
-                                    <span class="tooltiptext" id="myTooltip">Clear Field</span><i class="fa fa-undo">
-                                    </i></span>
-                            </div>
+                            <span class="clipboard tooltip" onclick="copyToClipboard()" onmouseout="outFunc()">
+                                <span class="tooltiptext" id="myTooltip">Copy Text</span><i class="fa fa-copy"></i>
+                            </span>
+                            <span class="clipboard tooltip" onclick="clearFieldConverted()" onmouseout="outFunc()">
+                                <span class="tooltiptext" id="myTooltip">Clear Field</span><i class="fa fa-undo"></i>
+                            </span>
                 </form>
             </div>
 
