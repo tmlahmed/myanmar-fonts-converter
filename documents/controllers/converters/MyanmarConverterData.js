@@ -271,7 +271,7 @@ tlsMyanmarConverterData["wininnwa"]=
 "ဏ္ဍ":"@",
 "ဋ္ဌ":"\u007C",
 "ဋ္ဋ":"\u00A5",
-"ကျပ်":"$"
+"ကျပ်":"usyf"
 },
 "stack":{
     "္က":"\u00FA",
